@@ -1,0 +1,222 @@
+/* Css syntax */
+selector /* Element html */{
+    color: blue;
+}
+
+.className /* Class */{
+    color: blue;
+}
+.btn {
+    padding: 10px;
+    color: white;
+}
+.btn-1 {
+    background-color: green;
+}
+.btn-2 {
+    background-color: blue;
+}
+.btn-3 {
+    background-color: purple;
+}
+
+#id/* ID */{
+    color:blue;
+}
+
+/* Selector Combinations */
+.selector-1.selector-2{
+    property:value;
+}
+#btn1.btn-1 {
+    color:aqua;  
+}
+
+.ancestor .child {
+    property:value;
+}
+div p {
+    color:red;
+}
+
+/* Exemple */
+.big {
+    font-size: 100%;
+}
+.large {
+    font-size: 100%;
+}
+.big, .large /* Meme que les 2 deux en haut */ {
+    font-size: 100%;
+}
+*{
+    font-family: Arial;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(./assets/image/logo.png) center/cover;
+    /* VH = 100% de la taille de l'ecran */
+    min-height: 100vh; 
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 10vw;
+    text-shadow: 3px, 3px, 8px, #00000042;
+    color: violet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    min-height: 450px;
+    width: 90%;
+    background-color: white;
+    /* Centrer une boite */
+    margin: 0 auto;
+    border: 2px solid rgb(0, 140, 255);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 4px #6c53d7;
+    padding: 15px;
+}
+
+h2{
+    margin: 0;
+}
+
+.flexbox, .grid, .absolute{
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+/* FLEXBOX
+Sert a repartir nos boites
+*/
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexbox li {
+    list-style: none;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: aqua;
+    /* Center un unique element vert et horz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.grid img {
+    width: 90%;
+    margin: 20px auto;
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "il i2"
+    "ta ta"
+    "vi bt";
+}
+
+input, textarea{
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+
+textarea{
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-submit{
+    grid-area: bt;
+    cursor: pointer;
+    background-color: aquamarine;
+    transition: 0.2s;
+}
+
+#btn-submit:hover{
+    background-color: blue;
+    color: white;
+}
+
+/* Absolute */
+
+.absolute{
+    position: relative;
+}
+
+#circle1 {
+    height: 80px;
+    width: 80px; 
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    top: -20px;
+    right: -20px;
+}
+
+#circle2 {
+    height: 40px;
+    width: 40px; 
+    border-radius: 150px;
+    background: teal;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);  
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .grid-container{
+        display: block;
+    }
+    .grid img{
+        width: 40%;
+    }
+   
+}
+
+@media screen and (max-width: 600px) {
+    .flexbox ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "i1"
+        "i2"
+        "ta"
+        "bt";
+    }
+    input textarea {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le titre de la page -->
+    <title>Test1_html</title>
+    <!-- Icone de l'onglet -->
+    <link rel="shortcut icon" href="logo.png"> 
+</head>
+<body>
+    <header>
+        <h1>Texte - Titre H1</h1>
+        <p>Texte basique, <em>Voici un text italique</em>, <strong>Et un texte en gras</strong>, <span>L'element en span ne revient pas a la ligne</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+    </header>
+    <section>
+        </div>
+        <div>
+            <h2>Titre - H2</h2>
+            <img src="logo.png" height="100" alt="photo gabriel">
+        </div>
+        <div>
+            <h3>Liste - Titre H3</h3>
+            <ul>
+                <li>UL = unordered list</li>
+                <li>UL = unordered list</li>
+                <li>UL = unordered list</li>
+            </ul>
+            <ol>
+                <li>OL = ordered list</li>
+                <li>OL = ordered list</li>
+                <li>OL = ordered list</li>
+            </ol>
+        </div>
+        <div>
+            <h4>Tableau - Titre H4</h4>
+            <table border="1" width="50%">
+                <!-- Legende -->
+                <caption>Populations dans le monde</caption>
+                <!-- En-tete -->
+                <thead>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Populations</th>
+                    </tr>
+                </thead>
+                <!-- Corps du tableau -->
+                <tbody>
+                    <tr>
+                        <td>France</td>
+                        <td>60M</td>
+                    </tr>
+                    <tr>
+                        <td>Canada</td>
+                        <td>15M</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>100M</td>
+                    </tr>
+                </tbody>
+             </table>
+        </div>
+        <div>
+            <h5>Liens - Titre H5</h5>
+            <a href="logo.png" target="_blank">Photo Gabriel</a>
+        </div>
+        <div>
+            <h6>Video - Titre H6</h6>
+            <video src="video.mp4" autoplay loop muted height="200" width="50%"></video>
+        </div>
+    </section>
+    <br>
+    <!-- Formulaire -->
+    <section>
+        <h2>Formulaire</h2>
+        <form action="/action.php" method="post">
+            <label for="name">Nom </label>
+            <input id="name" type="text" placeholder="Entrez votre nom">
+            <br>
+            <label for="age">Age </label>
+            <input id="age" type="number" min="0" max="99" step="1" value="18" placeholder="Entrez votre age">
+            <br>
+
+            <!-- Input Select -->
+            <label for="genre">Genre </label>
+            <select id="genre">
+                <option value="homme">Homme</option>
+                <option selected value="femme">Femme</option>
+            </select> <br>
+
+            <!-- Input Radio -->
+            <div>
+                <input type="radio" name="type" id="human">
+                <label for="human">Humain</label>
+
+                <input type="radio" name="type" checked id="dog">
+                <label for="dog">Dog</label>
+
+                <input type="radio" name="type" id="arbre">
+                <label for="arbre">Arbre</label>
+            </div>
+
+            <textarea  cols="30" rows="10" placeholder="Entrez votre demande"></textarea> 
+            <br>
+
+            <!-- Input checkbox -->
+            <label><input type="checkbox">Accepter les conditions</label>
+            <br>
+            <input type="submit" value="Valider">
+        </form>
+    </section>
+    <br>
+    <!-- Mail envoie de fichier -->
+    <footer>
+        <a href="mailto">Ecriver moi !</a>
+        <br>
+        <a href="notice.txt" download="nom-du-fichier">Download la notice</a>
+    </footer>
+
+</body>
+</html>

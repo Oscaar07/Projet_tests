@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1 id="titre">3 Boutons</h1>
+    </header>
+    <br>
+    <button id="btn1" class="btn btn-1">Bouton1</button>
+    <button id="btn2" class="btn btn-2">Bouton2</button>
+    <button id="btn3" class="btn btn-3">Bouton3</button>
+    <!-- Ancestor and child -->
+    <div>
+        <p>Selected</p>
+        <p>Selected</p>
+        <span>
+            <p>Selected</p>
+        </span>
+    </div>
+
+    <main>
+        <div class="flexbox">
+            <h2>Flexbox</h2>
+            <ul>
+                <li>boite 1</li>
+                <li>boite 2</li>
+                <li>boite 3</li>
+            </ul>
+        </div>
+
+        <div class="grid">
+            <h2>Grid</h2>
+            <div class="grid-container">
+                <img src="./assets/image/logo.png" alt="logo Gabriel">
+                <form action="">
+                    <input type="text" id="firstname" placeholder="Prenom">
+                    <input type="text" id="surname" placeholder="Nom">
+                    <textarea cols="30" rows="10" placeholder="Ici votre message"></textarea>
+                    <input type="submit" value="Valider" id="btn-submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="absolute">
+            <h2>Absolute</h2>
+            <span id="circle1"></span>
+            <span id="circle2"></span>
+        </div>
+    </main>
+</body>
+</html>
